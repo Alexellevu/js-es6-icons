@@ -96,3 +96,21 @@ const icone =[
 		family: 'fas'
 	}
 ];
+
+icone.forEach((element, index) => {
+    if(element.name === 'cat'){
+    document.getElementById('container').insertAdjacentHTML('beforeend',`
+    <div class="card">
+    <i class="fas fa-cat" style="color: #4545F7;"></i>
+    <h6>${element.name}</h6>
+    </div>
+    `)
+    }else if(element.name === 'crow'){
+        document.getElementById('container').insertAdjacentHTML('beforeend',`
+        <div class="card">
+        <i class="fas fa-crow" style="color: #4545F7;"></i>
+        <h6>CROW</h6>
+        </div>
+        `)
+    }
+});
