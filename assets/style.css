@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header h1{
+    color: #62C1E0;
+}
+
+.titolo{
+    margin: auto;
+    padding: 5px 5px;
+}
+
+header nav{
+    background-color: #62C1E0;
+    
+}
+
+.selettore{
+    display: flex;
+    justify-content: center;
+}
+
+
+.container{
+    
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.card{
+    background-color: #F0F0F0;
+    width: 150px;
+    height: 100px;
+    margin:1rem 1rem;
+    border-radius: 5px;
+
+}
