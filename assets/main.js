@@ -109,7 +109,21 @@ icone.forEach((element, index) => {
         document.getElementById('container').insertAdjacentHTML('beforeend',`
         <div class="card">
         <i class="fas fa-crow" style="color: #4545F7;"></i>
-        <h6>CROW</h6>
+        <h6>${element.name}</h6>
+        </div>
+        `)
+    }else if(element.name === 'carrot'){
+        document.getElementById('container').insertAdjacentHTML('beforeend',`
+        <div class="card">
+        <i class="fas fa-carrot" style="color:#F7B845"></i>
+        <h6>${element.name}</h6>
+        </div>
+        `)
+    }else if(element.name === 'user-astronaut'){
+        document.getElementById('container').insertAdjacentHTML('beforeend',`
+        <div class="card">
+        <i class="fas fa-user-astronaut" style="color:#9F459F"></i>
+        <h6>${element.name}</h6>
         </div>
         `)
     }
