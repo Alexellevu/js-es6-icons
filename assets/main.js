@@ -115,8 +115,14 @@ const icone =[
 ];
 
 
-var choice = document.getElementById('options').value;
-	console.log(choice);
+ document.getElementById('options').addEventListener('click',assegna);
+function assegna(){
+	var ch = document.getElementById('options').value;
+	return ch;
+}
+
+var choice = assegna();
+console.log(choice);
 
 icone.forEach((element) => {
 	
@@ -129,7 +135,28 @@ icone.forEach((element) => {
     </div>
     `)
 		
-	} 
+		} else if(choice === 'animal' && element.type == 'animal'){
+			document.getElementById('container').insertAdjacentHTML('beforeend',`
+			<div class="card">
+			<i class="fas fa-${element.name}" style="color: ${element.color};"></i>
+			<h6>${element.name}</h6>
+			</div>
+			`)
+					}else if(choice === 'vegetable' && element.type == 'vegetable'){
+					document.getElementById('container').insertAdjacentHTML('beforeend',`
+					<div class="card">
+					<i class="fas fa-${element.name}" style="color: ${element.color};"></i>
+				<h6>${element.name}</h6>
+				</div>
+				`)
+					}else if(choice === 'user' && element.type == 'user'){
+					document.getElementById('container').insertAdjacentHTML('beforeend',`
+					<div class="card">
+					<i class="fas fa-${element.name}" style="color: ${element.color};"></i>
+					<h6>${element.name}</h6>
+					</div>
+					`)
+	}
 	
 	
 });
