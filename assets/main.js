@@ -3,7 +3,8 @@ const icone =[
 		name: 'cat',
 		prefix: 'fa-',
 		type: 'animal',
-		family: 'fas'
+		family: 'fas',
+		
 	},
 	{
 		name: 'crow',
@@ -97,11 +98,28 @@ const icone =[
 	}
 ];
 
+
+
+
 icone.forEach((element, index) => {
-    if(element.name === 'cat'){
+	var choice = document.getElementById('options').value;
+	console.log(choice);
+
+	if(choice === 'all'){
+		document.getElementById('container').insertAdjacentHTML('beforeend',`
+    <div class="card">
+	<i class="fas fa-${element.name}" style="color: #4545F7;"></i>
+    <h6>${element.name}</h6>
+    </div>
+    `)
+		
+	} 
+	
+	
+   /*  if(element.name === 'cat'){
     document.getElementById('container').insertAdjacentHTML('beforeend',`
     <div class="card">
-    <i class="fas fa-cat" style="color: #4545F7;"></i>
+	<i class="fas fa-cat" style="color: #4545F7;"></i>
     <h6>${element.name}</h6>
     </div>
     `)
@@ -125,6 +143,7 @@ icone.forEach((element, index) => {
         <i class="fas fa-user-astronaut" style="color:#9F459F"></i>
         <h6>${element.name}</h6>
         </div>
-        `)
-    }
+        `) 
+    }*/
 });
+
